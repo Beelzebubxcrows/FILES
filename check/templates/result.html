@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<body>
+
+<p id="head">Plaigarism Checker</p>
+<hr>
+
+<div>
+
+    <p id="head2">
+        Your documents have the following matching sentences:
+    </p>
+    <p>
+    
+        {{answers.copied_string}}
+    </p>
+    
+
+
+
+</div>
+<div>
+
+
+    <p id="head2">Plaigarism Percentage</p>
+    <p>
+    
+    
+        {{answers.percent_copied}} &nbsp;%
+        
+        </p>
+    
+
+</div>
+
+
+<p>
+
+    <a href="http://127.0.0.1:8000/upload/">
+
+        <button class='btn btn-primary'>Check Again</button>
+    
+    </a>
+</p>
+
+
+</body>
+
+
+
+
+</html>
+
+
+<style>
+    hr{
+        color:aliceblue;
+    }
+    body{
+        background-color: black;
+        
+    }
+    p{
+        text-align:center;
+        color:white;
+    }
+    #head{
+        font-size:45px;
+    }
+
+    #head2{
+        font-size:25px;
+    }
+
+</style>
+
+{% endblock %}
